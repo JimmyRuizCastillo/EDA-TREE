@@ -38,9 +38,9 @@
                 <h2>Nombre</h2>
                 <input id="nameAdd" type="text">
                 <h2>Precio</h2>
-                <input id="priceAdd" type="text">
+                <input id="priceAdd" type="number">
                 <h2>Cantidad</h2>
-                <input id="amountAdd" type="text">
+                <input id="amountAdd" type="number">
                 <button id="btnAdd">AGREGAR</button>
                 <h3 id="validation"></h3>
             </div>
@@ -62,27 +62,26 @@
         <div class="separator"></div>
 
         <div id="min" class="container-tittle-elements">
-            <h2 class="text-tittle-elements">Este es el producto con menor precio de todos</h2>
+            <h2 class="text-tittle-elements">Orden (A-Z) Menor</h2>
             <div class="container-elements">
-                <div id="min-name"></div>
+                <div id="minName"></div>
             </div>
         </div>
 
         <div class="separator"></div>
 
         <div id="max" class="container-tittle-elements">
-            <h2 class="text-tittle-elements">Este es el producto con mayor precio de todos</h2>
+            <h2 class="text-tittle-elements">Orden (Z-A) Mayor</h2>
             <div class="container-elements">
-                <div id="max-name"></div>
+                <div id="maxName"></div>
             </div>
         </div>
 
         <div id="all" class="separator"></div>
 
-        <div class="container-tittle-elements">
-            <h2 class="text-tittle-elements">Productos totales (Inorden)</h2>
-            <div class="container-elements">
-                <h2 id="min-price"></h2>
+        <div class="container-menu-card">
+            <h2 class="text-tittle-card-container">Productos totales (Inorden)</h2>
+            <div id="containerCard" class="container-card">
             </div>
         </div>
     </div>

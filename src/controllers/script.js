@@ -3,9 +3,13 @@ import { bst } from "./dependencies.js";
 
 let btnAdd = document.getElementById("btnAdd")
 let btnSearch = document.getElementById("btnSearch")
-let dataMax = document.getElementById("max-name")
-let dataMin = document.getElementById("min-name")
+let dataMax = document.getElementById("maxName")
+let dataMin = document.getElementById("minName")
+let cardContainer = document.getElementById("containerCard")
 
+//let divInorder = document.getElementById("")
+dataMax.textContent="Árbol vacío"
+dataMin.textContent="Árbol vacío"
 function showMaxProduct(div){
     dataMax.innerHTML=""
     let data = bst.max()
@@ -24,7 +28,6 @@ btnAdd.addEventListener("click",()=>{
     let amount = document.getElementById("amountAdd").value
     let validation = document.getElementById("validation")
     validation.innerHTML=""
-
     validationAdd(name.toUpperCase(),price,amount,validation)
 
     //console.log(bst)
@@ -38,10 +41,11 @@ function validationAdd(name,price,amount,validation){
         validation.textContent="EXITOSO"
         showMaxProduct(dataMax)
         showMinProduct(dataMin)
+        inorderTravel()
     }
     else{
         validation.textContent="ERROR"
-        validation.style.color = "#ff0000"
+        validation.style.color = "#d5d564"
     }
 }
 
@@ -51,7 +55,7 @@ btnSearch.addEventListener("click",()=>{
     let divShow=document.getElementById("showProductFound")
     validation.innerHTML=""
     divShow.innerHTML=""
-    let search = bst.search(nombre)
+    let search = bst.search(nombre.toUpperCase())
     validationSearch(search, validation, divShow)
 })
 
@@ -62,7 +66,7 @@ function validationSearch(data, validation, divShow){
         divToDisplayElements(data,divShow)
     }
     else{
-        validation.style.color = "#ff0000"
+        validation.style.color = "#d5d564"
         validation.textContent="No encontrado"
     }
 }
@@ -80,4 +84,14 @@ function divToDisplayElements(data,divShow){
     divShow.appendChild(nombreShow)
     divShow.appendChild(priceShow)
     divShow.appendChild(amountShow)
+}
+
+function inorderTravel(){
+    cardContainer.innerHTML=""
+    bst.inorder((data)=>{
+        let card = document.createElement('div')
+        card.classList.add('card-style')
+        divToDisplayElements(data,card)
+        cardContainer.appendChild(card)
+    })
 }

@@ -69,6 +69,18 @@ class BST {
         else
         return this.searchMin(node.left)
     }
+
+    inorder(callback){
+        return this.inorderRoute(this.#root,callback)
+    }
+
+    inorderRoute(node,callback){
+        if(node!=null){
+            this.inorderRoute(node.left,callback)
+            callback(node)
+            this.inorderRoute(node.right,callback)
+        }
+    }
 }
 
 export default BST
