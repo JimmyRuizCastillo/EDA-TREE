@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-nav">
+        <nav class="nav-elements">
+            <ul>
+                <li>
+                    <a href="#add">Agregar producto</a>
+                </li>
+                <li>
+                    <a href="#search">Buscar producto</a>
+                </li>
+                <li>
+                    <a href="#max">Mayor precio</a>
+                </li>
+                <li>
+                    <a href="#min">Menor precio</a>
+                </li>
+                <li>
+                    <a href="#all">Todos los productos</a>
+                </li>
+            </ul>
+            
+        </nav>
+    </div>
+    <div class="container-father">
+        <div id="page-name">ÁRBOL BINARIO DE BÚSQUEDA</div>
+        <div id="add" class="container-tittle-elements">
+            <h2 class="text-tittle-elements">Agregar productos</h2>
+            <div class="container-elements">
+                <h2>Nombre</h2>
+                <input type="text">
+                <h2>Precio</h2>
+                <input type="text">
+                <h2>Cantidad</h2>
+                <input type="text">
+                <button>AGREGAR</button>
+                <h3 id="validation"></h3>
+            </div>
+        </div>
+
+        <div id="search" class="separator"></div>
+
+        <div class="container-tittle-elements">
+            <h2 class="text-tittle-elements">Buscar productos</h2>
+            <div class="container-elements">
+                <h2>Nombre del producto</h2>
+                <input type="text">
+                <button>BUSCAR</button>
+                <h3 id="show-product"></h3>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div id="min" class="container-tittle-elements">
+            <h2 class="text-tittle-elements">Este es el producto con menor precio de todos</h2>
+            <div class="container-elements">
+                <h2 id="min-price"></h2>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div id="max" class="container-tittle-elements">
+            <h2 class="text-tittle-elements">Este es el producto con mayor precio de todos</h2>
+            <div class="container-elements">
+                <h2 id="max-price"></h2>
+            </div>
+        </div>
+
+        <div id="all" class="separator"></div>
+
+        <div class="container-tittle-elements">
+            <h2 class="text-tittle-elements">Productos totales (Inorden)</h2>
+            <div class="container-elements">
+                <h2 id="min-price"></h2>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./src/controllers/script.js"></script>
+</body>
+</html>
