@@ -7,9 +7,10 @@ let dataMax = document.getElementById("maxName")
 let dataMin = document.getElementById("minName")
 let cardContainer = document.getElementById("containerCard")
 
-//let divInorder = document.getElementById("")
 dataMax.textContent="Árbol vacío"
+
 dataMin.textContent="Árbol vacío"
+
 function showMaxProduct(div){
     dataMax.innerHTML=""
     let data = bst.max()
@@ -51,7 +52,7 @@ function validationAdd(name,price,amount,validation){
 
 btnSearch.addEventListener("click",()=>{
     let nombre = document.getElementById("nameSearch").value
-    let validation = document.getElementById("valditionSearch")
+    let validation = document.getElementById("validationSearch")
     let divShow=document.getElementById("showProductFound")
     validation.innerHTML=""
     divShow.innerHTML=""
