@@ -31,16 +31,17 @@
     </div>
     <div class="container-father">
         <div id="page-name">ÁRBOL BINARIO DE BÚSQUEDA</div>
+        <div id="page-sub-name">Productos farmacéuticos</div>
         <div id="add" class="container-tittle-elements">
             <h2 class="text-tittle-elements">Agregar productos</h2>
             <div class="container-elements">
                 <h2>Nombre</h2>
-                <input type="text">
+                <input id="nameAdd" type="text">
                 <h2>Precio</h2>
-                <input type="text">
+                <input id="priceAdd" type="text">
                 <h2>Cantidad</h2>
-                <input type="text">
-                <button>AGREGAR</button>
+                <input id="amountAdd" type="text">
+                <button id="btnAdd">AGREGAR</button>
                 <h3 id="validation"></h3>
             </div>
         </div>
@@ -51,9 +52,10 @@
             <h2 class="text-tittle-elements">Buscar productos</h2>
             <div class="container-elements">
                 <h2>Nombre del producto</h2>
-                <input type="text">
-                <button>BUSCAR</button>
-                <h3 id="show-product"></h3>
+                <input id="nameSearch" type="text">
+                <button id="btnSearch">BUSCAR</button>
+                <h3 id="valditionSearch"></h3>
+                <div id="showProductFound"></div>
             </div>
         </div>
 
@@ -62,7 +64,7 @@
         <div id="min" class="container-tittle-elements">
             <h2 class="text-tittle-elements">Este es el producto con menor precio de todos</h2>
             <div class="container-elements">
-                <h2 id="min-price"></h2>
+                <div id="min-name"></div>
             </div>
         </div>
 
@@ -71,7 +73,7 @@
         <div id="max" class="container-tittle-elements">
             <h2 class="text-tittle-elements">Este es el producto con mayor precio de todos</h2>
             <div class="container-elements">
-                <h2 id="max-price"></h2>
+                <div id="max-name"></div>
             </div>
         </div>
 

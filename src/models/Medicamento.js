@@ -1,13 +1,13 @@
 class Medicamento{
     name
     price
-    stock
+    amount
     id
-    constructor(name, price, stock, id){
+    constructor(name, price, amount){
+        this.id = Math.floor(Math.random() * 9000) + 1000
         this.name = name
         this.price = price
-        this.stock = stock
-        this.id = id
+        this.amount = amount
     }
 }
 

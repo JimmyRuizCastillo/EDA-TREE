@@ -15,7 +15,7 @@ class BST {
     }
 
     insertNode(node, value){
-        if(node.value.price>value.price){
+        if(node.value.name>value.name){
             if(node.left==null){
                 node.left = new Node(value)
             }
@@ -36,10 +36,10 @@ class BST {
     }
 
     searchNode(node,value){
-        if(node === null || node.value.price === value){
+        if(node === null || node.value.name === value){
             return node
         }
-        else if(value < node.value.price){
+        else if(value < node.value.name){
             return this.searchNode(node.left, value)
         }
         else
@@ -63,11 +63,11 @@ class BST {
     }
 
     searchMin(node){
-        if(node===null || node.right===null){
+        if(node===null || node.left===null){
             return node
         }
         else
-        return this.searchMin(node.right)
+        return this.searchMin(node.left)
     }
 }
 
