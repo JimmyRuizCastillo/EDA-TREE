@@ -1,4 +1,8 @@
 body {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #bfc49a;
 }
 
@@ -80,7 +84,7 @@ body {
 }
 
 #minName {
-  color: #e5e5e5;
+  color: #d5d564;
   width: 300px;
 }
 
@@ -130,6 +134,7 @@ body {
 }
 
 #showProductFound {
+  color: #2bc88c;
   margin-top: 5%;
 }
 
@@ -161,10 +166,12 @@ nav a {
 
 nav li {
   display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 10%;
   padding: 5px 10px;
   background-color: #377570;
-  border: 1px solid #bfc49a;
+  border: 1px solid #377570;
   text-align: center;
   color: #fff;
 }
@@ -175,8 +182,9 @@ nav li:hover {
 }
 
 .container-menu-card {
+  border-radius: 4px;
   background-color:#ada670;
-  text-align: center;
+  text-align: center; 
 }
 
 .text-tittle-card-container {
@@ -190,13 +198,20 @@ nav li:hover {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
+  
 }
 
 .card-style{
+  margin-left: 10%;
+  margin-bottom: 10%;
+  color: #285964;
   font-family: 'Montserrat', sans-serif;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-color: #285964;
-  background-color: #71643b;
+  background-color: #c5c55f;;
   width: 80%;
+  
 }
 
 #card{
