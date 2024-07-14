@@ -17,12 +17,6 @@
                     <a href="#search">Buscar producto</a>
                 </li>
                 <li>
-                    <a href="#max">Mayor precio</a>
-                </li>
-                <li>
-                    <a href="#min">Menor precio</a>
-                </li>
-                <li>
                     <a href="#all">Todos los productos</a>
                 </li>
             </ul>
@@ -30,7 +24,6 @@
         </nav>
     </div>
     <div class="container-father">
-        <div id="page-name">ÁRBOL BINARIO DE BÚSQUEDA</div>
         <div id="page-sub-name">Productos farmacéuticos</div>
         <div id="add" class="container-tittle-elements">
             <h2 class="text-tittle-elements">Agregar productos</h2>
@@ -41,6 +34,8 @@
                 <input id="priceAdd" type="number">
                 <h2>Cantidad</h2>
                 <input id="amountAdd" type="number">
+                <h2>Miligramos</h2>
+                <input id="mgAdd" type="number">
                 <button id="btnAdd">AGREGAR</button>
                 <h3 id="validation"></h3>
             </div>
@@ -62,7 +57,7 @@
         <div class="separator"></div>
 
         <div id="min" class="container-tittle-elements">
-            <h2 class="text-tittle-elements">Orden (A-Z) Menor</h2>
+            <h2 class="text-tittle-elements">Primer medicamento en la lista (A-Z)</h2>
             <div class="container-elements">
                 <div id="minName"></div>
             </div>
@@ -71,7 +66,7 @@
         <div class="separator"></div>
 
         <div id="max" class="container-tittle-elements">
-            <h2 class="text-tittle-elements">Orden (Z-A) Mayor</h2>
+            <h2 class="text-tittle-elements">último medicamento en la lista (Z-A)</h2>
             <div class="container-elements">
                 <div id="maxName"></div>
             </div>

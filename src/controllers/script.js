@@ -7,9 +7,9 @@ let dataMax = document.getElementById("maxName")
 let dataMin = document.getElementById("minName")
 let cardContainer = document.getElementById("containerCard")
 
-dataMax.textContent="Árbol vacío"
+dataMax.textContent="Vacío"
 
-dataMin.textContent="Árbol vacío"
+dataMin.textContent="Vacío"
 
 function showMaxProduct(div){
     dataMax.innerHTML=""
@@ -27,16 +27,17 @@ btnAdd.addEventListener("click",()=>{
     let name = document.getElementById("nameAdd").value
     let price = document.getElementById("priceAdd").value
     let amount = document.getElementById("amountAdd").value
+    let mg = document.getElementById("mgAdd").value
     let validation = document.getElementById("validation")
     validation.innerHTML=""
-    validationAdd(name.toUpperCase(),price,amount,validation)
+    validationAdd(name.toUpperCase(),price,amount,mg,validation)
 
     //console.log(bst)
 })
 
-function validationAdd(name,price,amount,validation){
+function validationAdd(name,price,amount,mg,validation){
     if(name.trim().length!=0 && price.trim().length!=0 && amount.trim().length!=0){
-        let medicamento = new Medicamento(name, price, amount)
+        let medicamento = new Medicamento(name, price, amount,mg)
         bst.add(medicamento)
         validation.style.color="#2bc88c"
         validation.textContent="EXITOSO"
@@ -81,10 +82,13 @@ function divToDisplayElements(data,divShow){
     priceShow.textContent = "Precio: " + data.value.price
     let amountShow = document.createElement('h3')
     amountShow.textContent = "Cantidad: " + data.value.amount
+    let mgShow = document.createElement('h3')
+    mgShow.textContent = data.value.mg+" mg"
     divShow.appendChild(idShow)
     divShow.appendChild(nombreShow)
     divShow.appendChild(priceShow)
     divShow.appendChild(amountShow)
+    divShow.appendChild(mgShow)
 }
 
 function inorderTravel(){
